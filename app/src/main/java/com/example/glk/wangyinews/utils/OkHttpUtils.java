@@ -34,6 +34,7 @@ public class OkHttpUtils {
 
     private Handler mDelivery;
 
+    //构造方法中,各种初始化操作:设置超时、设置cookie enable、新建Handler对象
     private OkHttpUtils(){
         mOkHttpClient = new OkHttpClient();
         mOkHttpClient.setConnectTimeout(10, TimeUnit.SECONDS);
@@ -44,6 +45,7 @@ public class OkHttpUtils {
         mDelivery = new Handler(Looper.getMainLooper());
     }
 
+    //单例方法
     private synchronized static OkHttpUtils getInstance(){
         if(mInstance == null){
             mInstance = new OkHttpUtils();
@@ -57,7 +59,9 @@ public class OkHttpUtils {
      * @param callback      回调接口
      */
     private void getRequest(String url,final ResultCallback callback){
+        //创建Request
         final Request request = new Request.Builder().url(url).build();
+        //传递给消息处理方法
         deliveryResult(callback,request);
     }
 
@@ -68,13 +72,15 @@ public class OkHttpUtils {
      * @param params        参数
      */
     private void postRequest(String url, final ResultCallback callback, List<Param> params){
+        //创建Request
         Request request = buildPostRequest(url,params);
+        //传递给消息处理方法
         deliveryResult(callback,request);
     }
 
 
     /**
-     * 根据参数生成Request
+     * 建立Post操作的Request参数
      * @param url
      * @param params
      * @return

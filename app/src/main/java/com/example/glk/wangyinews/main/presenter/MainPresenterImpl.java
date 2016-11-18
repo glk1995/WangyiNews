@@ -3,7 +3,7 @@ package com.example.glk.wangyinews.main.presenter;
 import com.example.glk.wangyinews.R;
 import com.example.glk.wangyinews.main.view.MainView;
 
-/**
+/**根据不同的Drawer Item切换到不同的界面
  * Created by zgqdg on 2016/11/13.
  */
 

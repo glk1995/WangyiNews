@@ -39,7 +39,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.mContext = context;
     }
 
-    private void setmData(List<NewsBean> data) {
+    public void setmData(List<NewsBean> data) {
         this.mData = data;
         //notifyDataSetChanged方法通过外部如果适配器内容改变
         //强制调用getView来刷新每个Item的内容，可以实现动态刷新列表的功能
@@ -121,7 +121,6 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void setOnItemClickListener(OnItemClickListener onItemClickListener){
         this.mOnItemClickListener = onItemClickListener;
     }
-
 
 
     public interface OnItemClickListener {

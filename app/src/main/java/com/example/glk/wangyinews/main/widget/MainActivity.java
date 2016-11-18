@@ -16,6 +16,7 @@ import com.example.glk.wangyinews.R;
 import com.example.glk.wangyinews.main.presenter.MainPresenter;
 import com.example.glk.wangyinews.main.presenter.MainPresenterImpl;
 import com.example.glk.wangyinews.main.view.MainView;
+import com.example.glk.wangyinews.news.widget.NewsFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,7 +99,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     public void switch2News() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new NewsFragment()).commit();
+        toolbar.setTitle("新闻");
     }
 
     @Override
