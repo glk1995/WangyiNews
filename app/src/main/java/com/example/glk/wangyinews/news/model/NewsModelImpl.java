@@ -52,6 +52,7 @@ public class NewsModelImpl implements NewsModel {
     @Override
     public void loadNewsDetail(final String docid, final OnLoadNewsDetailListener listener) {
         String url = getDetailUrl(docid);
+        Log.e("URL",url);
         OkHttpUtils.ResultCallback<String> loadNewsCallback = new OkHttpUtils.ResultCallback<String>() {
             @Override
             public void onSuccess(String response) {

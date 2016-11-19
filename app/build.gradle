@@ -38,4 +38,5 @@ dependencies {
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile project(':swipeback')
+    compile files('libs/tbs_sdk_thirdapp_v2.5.0.1031_36880_sharewithdownload_obfs_20161107_154437.jar')
 }

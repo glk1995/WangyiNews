@@ -19,6 +19,8 @@ public class ImageBean implements Serializable {
 
     private int width;
 
+
+
     public int getHeight() {
         return height;
     }

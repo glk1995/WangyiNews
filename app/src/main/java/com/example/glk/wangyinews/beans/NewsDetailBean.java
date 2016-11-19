@@ -38,32 +38,12 @@ public class NewsDetailBean implements Serializable {
     /**
      * 图片列表
      */
-    private List<String> imgList;
+    private List<ImgBean> img;
 
-
-    public String getDocid() {
-        return docid;
-    }
-
-    public void setDocid(String docid) {
-        this.docid = docid;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
+    /**
+     * 分享链接
+     */
+    private String shareLink;
 
     public String getBody() {
         return body;
@@ -71,14 +51,6 @@ public class NewsDetailBean implements Serializable {
 
     public void setBody(String body) {
         this.body = body;
-    }
-
-    public String getPtime() {
-        return ptime;
-    }
-
-    public void setPtime(String ptime) {
-        this.ptime = ptime;
     }
 
     public String getCover() {
@@ -89,11 +61,51 @@ public class NewsDetailBean implements Serializable {
         this.cover = cover;
     }
 
-    public List<String> getImgList() {
-        return imgList;
+    public String getDocid() {
+        return docid;
     }
 
-    public void setImgList(List<String> imgList) {
-        this.imgList = imgList;
+    public void setDocid(String docid) {
+        this.docid = docid;
+    }
+
+    public String getPtime() {
+        return ptime;
+    }
+
+    public void setPtime(String ptime) {
+        this.ptime = ptime;
+    }
+
+    public String getShareLink() {
+        return shareLink;
+    }
+
+    public void setShareLink(String shareLink) {
+        this.shareLink = shareLink;
+    }
+
+    public List<ImgBean> getImg() {
+        return img;
+    }
+
+    public void setImg(List<ImgBean> img) {
+        this.img = img;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

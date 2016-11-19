@@ -19,15 +19,17 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".news.widget.NewsDetailActivity"
             android:label="@string/title_activity_news_detail"
-            android:theme="@style/AppTheme.NoActionBar.Translucent"/>
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.Translucent"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity android:name="me.imid.swipebacklayout.lib.app.SwipeBackActivity"/>
         <activity android:name="me.imid.swipebacklayout.lib.app.SwipeBackPreferenceActivity"/>
+
     </application>
 
 </manifest>

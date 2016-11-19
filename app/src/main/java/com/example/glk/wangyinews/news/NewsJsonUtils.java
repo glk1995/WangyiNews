@@ -72,6 +72,7 @@ public class NewsJsonUtils {
             if(jsonElement == null) {
                 return null;
             }
+            //
             newsDetailBean = JsonUtils.deserialize(jsonElement.getAsJsonObject(), NewsDetailBean.class);
         } catch (Exception e) {
             LogUtils.e(TAG, "readJsonNewsBeans error" , e);
