@@ -46,7 +46,7 @@ public class NewsDetailPresenterImpl implements NewsDetailPresenter,OnLoadNewsDe
             String body = Func(newsDetailBean.getBody(),imgArr);
             //对新闻加上html
             String html = getHtml(body,newsDetailBean);
-            newsDetailView.showNewsDetailContent(html);
+            newsDetailView.showNewsDetailContent(html,newsDetailBean.getTitle()+newsDetailBean.getShareLink());
         }
         //newsDetailView.hideProgress();
     }

@@ -6,7 +6,7 @@ package com.example.glk.wangyinews.news.view;
 
 public interface NewsDetailView {
 
-    void showNewsDetailContent(String newsDetailContent);
+    void showNewsDetailContent(String newsDetailContent,String url);
 
     void showProgress();
 

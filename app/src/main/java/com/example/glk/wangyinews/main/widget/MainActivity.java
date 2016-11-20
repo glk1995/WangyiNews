@@ -17,6 +17,7 @@ import com.example.glk.wangyinews.main.presenter.MainPresenter;
 import com.example.glk.wangyinews.main.presenter.MainPresenterImpl;
 import com.example.glk.wangyinews.main.view.MainView;
 import com.example.glk.wangyinews.news.widget.NewsFragment;
+import com.tencent.smtt.sdk.QbSdk;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        //预加载X5内核环境
+        QbSdk.initX5Environment(this,null);
         setSupportActionBar(toolbar);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.drawer_open, R.string.drawer_close);
