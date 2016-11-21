@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 
 public class NewsFragment extends Fragment {
 
+
     public static final int NEWS_TYPE_TOP = 0;
     public static final int NEWS_TYPE_NBA = 1;
     public static final int NEWS_TYPE_CARS = 2;

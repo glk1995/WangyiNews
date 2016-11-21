@@ -44,9 +44,7 @@
     <com.tencent.smtt.sdk.WebView
                 android:id="@+id/webcontent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp">
+                android:layout_height="match_parent">
     </com.tencent.smtt.sdk.WebView>
 
 

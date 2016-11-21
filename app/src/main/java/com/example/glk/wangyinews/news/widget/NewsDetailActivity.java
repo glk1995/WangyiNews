@@ -6,7 +6,6 @@ import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,8 +23,7 @@ import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -53,19 +51,14 @@ public class NewsDetailActivity extends SwipeBackActivity implements NewsDetailV
     private NewsDetailPresenter newsDetailPresenter;
     private SwipeBackLayout swipeBackLayout;
     private String shareLink= null;
-    SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        Log.e("TAG0", sf.format(new Date()));
         super.onCreate(savedInstanceState);
-        Log.e("TAG0.1", sf.format(new Date()));
         setContentView(R.layout.activity_news_detail);
-        Log.e("TAG0.2", sf.format(new Date()));
         ButterKnife.bind(this);
 
-        Log.e("TAG1", sf.format(new Date()));
         //设置Toolbar
         setSupportActionBar(toolbar);
         //给左上角设置一个返回的图标
@@ -83,7 +76,6 @@ public class NewsDetailActivity extends SwipeBackActivity implements NewsDetailV
         swipeBackLayout.setEdgeSize(ToolsUtil.getWidthInPx(this));
         swipeBackLayout.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
 
-        Log.e("TAG2", "time");
         //获取activitList传递过来的内容
         news = (NewsBean) getIntent().getSerializableExtra("news");
 
@@ -95,6 +87,12 @@ public class NewsDetailActivity extends SwipeBackActivity implements NewsDetailV
                 WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         //加载内容
         newsDetailPresenter.loadNewsDetail(news.getDocid());
+    }
+
+    @Override
+    protected boolean onPrepareOptionsPanel(View view, Menu menu) {
+        menu.findItem(R.id.action_share).setVisible(true);
+        return super.onPrepareOptionsPanel(view, menu);
     }
 
     @Override

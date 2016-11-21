@@ -15,6 +15,11 @@ public class Urls {
     public static final String END_URL = "-" + PAZE_SIZE + ".html";
     public static final String END_DETAIL_URL = "/full.html";
 
+    //推荐
+    // http://c.3g.163.com/recommend/getSubDocPic?tid=T1348647853363&from=toutiao&offset=0&size=10&fn=1&prog=LMA1
+    public static final String REC_URL = "http://c.3g.163.com/recommend/getSubDocPic?tid=T1348647853363&from=toutiao&offset=0&size=10&fn=";
+    public static final String REC_TAIL = "&prog=LMA1";
+
     //头条
     public static final String TOP_URL = HOST + "nc/article/headline/";
     public static final String TOP_ID = "T1348647909107";
