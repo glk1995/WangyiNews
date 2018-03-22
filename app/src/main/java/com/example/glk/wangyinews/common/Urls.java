@@ -7,8 +7,6 @@ package com.example.glk.wangyinews.common;
 
 public class Urls {
 
-    //http://c.m.163.com/nc/article/headline/T1348647909107/0-5.html
-
     public static final int PAZE_SIZE = 20;
 
     public static final String HOST = "http://c.m.163.com/";
