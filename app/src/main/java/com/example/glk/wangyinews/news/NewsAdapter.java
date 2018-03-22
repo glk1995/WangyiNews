@@ -27,6 +27,7 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_ITEM = 0;
     private static final int TYPE_FOOTER = 1;
 
+
     //List<NewsBean>的数据
     private List<NewsBean> mData;
     //是否显示加载
