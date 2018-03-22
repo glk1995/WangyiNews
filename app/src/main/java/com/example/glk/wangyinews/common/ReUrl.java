@@ -5,7 +5,6 @@ package com.example.glk.wangyinews.common;
  */
 
 public class ReUrl {
-
     //float-ad
     //http://m.163.com/special/newsclient/float_ads.json
     //刷新一次每次都不一样
